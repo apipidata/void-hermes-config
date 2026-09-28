@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://void.lab/schemas/recon.schema.json",
+  "title": "Recon run output",
+  "description": "Schema-valid output contract for every autonomous recon pass (AGENTS.md §3).",
+  "type": "object",
+  "required": ["engagement", "phase", "target", "started", "tool", "command", "findings"],
+  "additionalProperties": false,
+  "properties": {
+    "engagement": {
+      "type": "string",
+      "description": "Engagement ID from scope.yaml."
+    },
+    "phase": {
+      "const": "recon"
+    },
+    "target": {
+      "type": "string",
+      "description": "Asset as written in scope.yaml (CIDR, domain, or asset ID)."
+    },
+    "started": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "finished": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "tool": {
+      "type": "string",
+      "minLength": 1
+    },
+    "command": {
+      "type": "string",
+      "description": "Exact command line executed, replayable verbatim."
+    },
+    "scope_checked": {
+      "type": "boolean",
+      "const": true,
+      "description": "Confirms the target resolved against scope.yaml before the request left the host."
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["asset", "evidence"],
+        "additionalProperties": false,
+        "properties": {
+          "asset": { "type": "string" },
+          "service": { "type": "string" },
+          "version": { "type": "string" },
+          "port": { "type": "integer", "minimum": 0, "maximum": 65535 },
+          "transport": { "enum": ["tcp", "udp"] },
+          "detail": { "type": "string" },
+          "evidence": {
+            "type": "string",
+            "description": "Evidence ID resolvable under ./evidence/<engagement>/."
+          }
+        }
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Declared unknowns — never silently omitted."
+    }
+  }
+}

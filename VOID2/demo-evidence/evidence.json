@@ -1,0 +1,38 @@
+{
+  "mode": "offline_artifact_inventory",
+  "records": [
+    {
+      "path": "start.md",
+      "bytes": 106,
+      "sha256": "d93bfaddef5bd9d86fd381eefbea369145eb5d8ef2647c2a6ef7f729831ee941",
+      "kind": "other",
+      "status": "observed",
+      "utc": "2026-09-28T09:58:42.932368+00:00",
+      "id": "E0001"
+    },
+    {
+      "path": "notes.txt",
+      "bytes": 69,
+      "sha256": "ff438799170b5bc8045deacaa0fc7d15b7146c288062c1caf0409100bcdbe1e0",
+      "kind": "other",
+      "status": "observed",
+      "utc": "2026-09-28T09:58:42.933112+00:00",
+      "id": "E0002"
+    }
+  ],
+  "transitions": [
+    {
+      "source": "E0001",
+      "destination": "E0002",
+      "reason": "contained literal file link"
+    }
+  ],
+  "budget_exhausted": false,
+  "sample_execution": false,
+  "network_requests": 0,
+  "limitations": [
+    "Not a vulnerability scanner.",
+    "Metadata and hashes only; no exploitability conclusion.",
+    "Use immutable inputs in an isolated VM; this script is not an OS sandbox."
+  ]
+}

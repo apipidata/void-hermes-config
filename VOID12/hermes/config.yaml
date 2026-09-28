@@ -1,0 +1,197 @@
+# config.yaml — void lab, everything enabled
+# Target: ~/.hermes/config.yaml
+# Validate: python3 -c "import yaml,sys; yaml.safe_load(open(sys.argv[1]))" config.yaml
+# Mode: FORCE-ENABLE. No skills parked, no plugins disabled, no dedupe pruning.
+#       Duplicate map retained in SKILLS-AUDIT.md for optional use, not applied.
+
+operator:
+  name: void
+  address_as: void
+  persona: true                   # SOUL.md §2 active on every profile
+  chat_language: mixed_id_en
+
+soul:
+  path: "~/.hermes/SOUL.md"
+  agents_path: "~/.hermes/AGENTS.md"
+  prefill_path: "~/.hermes/prefill.txt"
+  persona_layer: true
+  apply_to_all_profiles: true
+  profiles:
+    - default                   # <-- persona + voice land here too, not just named profiles
+    - orca-status
+    - superpowers
+
+# ── SKILLS: FULL LOAD ──────────────────────────────────────────────
+skills:
+  auto_load: true
+  load_all: true                  # every dir on the load path, no tier filter
+  disabled: []                    # nothing parked
+  dedupe: false                   # keep the literal duplicates loaded
+  external_dirs:
+    - "~/.hermes/skills"
+    - "~/.hermes/skills/external"
+  project_discovery: true
+  trusted_project_dirs: []
+  creation_nudge_interval: 15
+  template_vars: {}
+  inline_shell: false
+  guard_agent_created: true
+  write_approval: true            # keep: stops a bad skill from overwriting a good one at 3am
+  ledger: true                    # keep: makes the next audit cheap
+
+# ── TIERS ──────────────────────────────────────────────────────────
+# load_all: true above supersedes this block. Kept as a declared tier map so
+# load order and routing stay deterministic when load_all is switched off.
+skill_tiers:
+  always_on:                      # resolution priority, not a filter
+    - void-persona
+    - void-writing-craft
+    - void-reach
+    - rich-message
+    - void-arsenal
+    - effective-agent-skills
+    - skill-router
+    - skill-check
+    - verification-before-completion
+    - systematic-debugging
+    - falsify
+    - doubt-driven-development
+    - anti-sycophancy
+    - anti-deception
+    - tdd
+    - code-review-and-quality
+    - clean-code
+    - git-workflow
+    - create-pr
+    - context-engineering
+    - strategic-compact
+    - agent-memory
+    - deep-research
+    - grounded-citations
+    - telegram
+    - cron-doctor
+    - mcp-server-lifecycle
+
+  on_demand: []                   # empty: load_all covers everything
+  parked: []                      # empty: nothing parked
+
+# ── COMMUNITY SKILLS (from github, wired in) ───────────────────────
+community_skills:
+  installed:
+    - name: superpowers
+      repo: obra/superpowers
+      via: plugin
+      enabled: true
+    - name: caveman
+      repo: JuliusBrussee/caveman
+      enabled: true
+    - name: i-have-adhd
+      repo: ayghri/i-have-adhd
+      enabled: true
+      note: "overlaps SOUL.md §7; trigger explicitly if both fire at once"
+    - name: last30days
+      repo: mvanhorn/last30days-skill
+      enabled: true
+    - name: graphify
+      repo: Graphify-Labs/graphify
+      enabled: true
+    - name: understand-anything
+      repo: Egonex-AI/Understand-Anything
+      enabled: true
+    - name: ponytail
+      repo: DietrichGebert/ponytail
+      enabled: true
+    - name: diagram-design
+      repo: cathrynlavery/diagram-design
+      enabled: true
+    - name: viserys-agent
+      repo: rizqinrr/viserys-agent
+      enabled: true
+    - name: agentic-awesome-skills
+      repo: sickn33/agentic-awesome-skills
+      enabled: true
+      note: "index repo, not one skill — vendored for lookup"
+    - name: scientific-agent-skills
+      repo: K-Dense-AI/scientific-agent-skills
+      enabled: true
+      bundle: true
+      count: 166
+  bundles:
+    aas: { enabled: true, count: 2474 }
+    ecc: { enabled: true, count: 292 }
+    claude-red: { enabled: true, count: 78 }
+    ai-tools: { enabled: true, count: 40 }
+    caveman: { enabled: true, count: 20 }
+    ponytail: { enabled: true, count: 6 }
+    superpowers: { enabled: true, count: 15 }
+    viserys: { enabled: true, count: 29 }
+    security: { enabled: true, count: 2 }
+    devops: { enabled: true, count: 4 }
+    autonomous-ai-agents: { enabled: true, count: 8 }
+    software-development: { enabled: true, count: 15 }
+    productivity: { enabled: true, count: 18 }
+    research: { enabled: true, count: 6 }
+    media: { enabled: true, count: 3 }
+    web: { enabled: true, count: 1 }
+
+# ── PLUGINS ────────────────────────────────────────────────────────
+plugins:
+  enabled:
+    - orca-status
+    - superpowers
+  disabled: []
+  scan_on_install: true
+
+# ── MCP ────────────────────────────────────────────────────────────
+mcp_servers:
+  - chrome-devtools
+
+# ── INTERFACE / RICH MESSAGE ───────────────────────────────────────
+# NOTE: key names below are the declared targets. If the local build names them
+# differently, run ./probe-config.sh — it greps config_defaults.py and prints
+# the real keys before you paste.
+interface:
+  rich_message: true
+  markdown: true
+  tables: true
+  panels: true                    # box-drawn callout blocks
+  collapsible_sections: true
+  code_fence_language_always: true
+  show_status_line: true
+  show_timestamps: false
+  show_token_ledger: false
+  divider_style: "─"
+  truncate_long_outputs: false    # void wants the whole thing, not a preview
+
+# ── OUTPUT STYLE ───────────────────────────────────────────────────
+# The decorative half of the old scaffolding, kept because it's yours.
+# Labelled honestly below so nothing here is mistaken for a behavior switch.
+output_style:
+  marker: "@void"                 # first token of every reply — identity, not ceremony
+  banner: "void lab"              # optional header text for report-style output
+  godmode_label: false            # cosmetic only. set true and it prints a
+                                  # label. changes nothing about the output,
+                                  # because a label can't — see the note at the
+                                  # bottom of this block.
+  divider: null                   # a divider string here would render between
+                                  # the real answer and an echo of it. costs
+                                  # tokens, adds noise. left null on purpose.
+  max_depth_default: true         # full implementations, exact commands, real params
+  debug_surfaces: true            # reasoning visible on request
+
+# On GODMODE: the label, the divider, and "write the opposite" are inert as
+# decoration and counterproductive as instruction. The label is available above
+# if you want the ink. The inverse-output instruction is not written anywhere in
+# this pack — mechanically it produces your real answer plus a second inverted
+# answer plus a stamp, which is scroll time and tokens for nothing. Depth is
+# bought with §1 of void-reach, not with a banner.
+
+# ── RUNTIME ────────────────────────────────────────────────────────
+runtime:
+  parallel_tool_calls: true
+  background_for_long_tasks: true
+  verify_before_done: true
+  artifact_presence_check: true
+  notes_file: notes.md
+  max_detail_default: high
+  compress_casual_turns: true

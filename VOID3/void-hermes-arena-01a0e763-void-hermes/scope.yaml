@@ -1,0 +1,45 @@
+# scope.yaml — engagement authorization registry
+# -----------------------------------------------------------------------------
+# Nothing in AGENTS.md §2–§6 runs against a target that does not resolve to an
+# entry here. Replace per engagement. `config.yaml` §5 points at this file.
+
+engagement: void-lab-2026-09
+authorized_by: void
+authorized_at: 2026-09-28T00:00:00Z
+expires: 2026-10-05T00:00:00Z
+classification: lab-only
+
+rules:
+  - no production systems
+  - no data leaves the lab root
+  - "max pivot depth: 3"
+  - all test material tagged lab-only or sandbox
+
+targets:
+  - id: T-001
+    kind: cidr
+    value: 10.10.0.0/24
+    note: lab range
+    allowed_phases: [recon, enumerate, identify, exploit, pivot, report]
+
+  - id: T-002
+    kind: domain
+    value: ctf.void.lab
+    note: training platform
+    allowed_phases: [recon, enumerate, identify, exploit, report]
+
+  - id: T-003
+    kind: binary
+    value: samples/void-lab/sample.bin
+    note: malware analysis sample
+    allowed_phases: [identify, report]
+
+  - id: T-004
+    kind: bug_bounty
+    value: scope from program page, snapshot at evidence/<eng>/program-scope.png
+    note: authorized program targets only
+    allowed_phases: [recon, enumerate, identify, report]
+
+excluded:
+  - any host not listed above
+  - any third-party SaaS tenant without a signed rules-of-engagement

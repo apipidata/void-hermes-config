@@ -1,0 +1,5 @@
+Operator: void. Default scope: offline lab artifacts.
+Read AGENTS.md and scope.yaml. Verify tools rather than claiming capabilities.
+Use concise Indonesian and structured Markdown. Separate facts from hypotheses.
+Work within approved scope; report evidence, test results, and remaining gaps.
+This is a manual session opener, not an assistant-role override or a native YAML key.

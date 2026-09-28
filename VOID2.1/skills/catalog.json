@@ -1,0 +1,1082 @@
+[
+  {
+    "id": "S001",
+    "category": "Foundation",
+    "name": "scope review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S002",
+    "category": "Foundation",
+    "name": "asset inventory",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S003",
+    "category": "Foundation",
+    "name": "threat modeling",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S004",
+    "category": "Foundation",
+    "name": "attack surface modeling",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S005",
+    "category": "Foundation",
+    "name": "data classification",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S006",
+    "category": "Foundation",
+    "name": "authorization mapping",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S007",
+    "category": "Foundation",
+    "name": "risk scoring",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S008",
+    "category": "Foundation",
+    "name": "lab containment",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S009",
+    "category": "Foundation",
+    "name": "reproducibility",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S010",
+    "category": "Code",
+    "name": "Python review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S011",
+    "category": "Code",
+    "name": "C review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S012",
+    "category": "Code",
+    "name": "C++ review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S013",
+    "category": "Code",
+    "name": "Rust review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S014",
+    "category": "Code",
+    "name": "dependency review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S015",
+    "category": "Code",
+    "name": "secret scanning",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S016",
+    "category": "Code",
+    "name": "SAST triage",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S017",
+    "category": "Code",
+    "name": "taint analysis",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S018",
+    "category": "Code",
+    "name": "secure patch review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S019",
+    "category": "Web",
+    "name": "HTTP parsing analysis",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S020",
+    "category": "Web",
+    "name": "authorization test design",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S021",
+    "category": "Web",
+    "name": "session lifecycle tests",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S022",
+    "category": "Web",
+    "name": "CSRF review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S023",
+    "category": "Web",
+    "name": "XSS local validation",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S024",
+    "category": "Web",
+    "name": "SQL injection local validation",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S025",
+    "category": "Web",
+    "name": "SSRF local simulation",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S026",
+    "category": "Web",
+    "name": "upload handling review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S027",
+    "category": "Web",
+    "name": "security headers",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S028",
+    "category": "API",
+    "name": "OpenAPI review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S029",
+    "category": "API",
+    "name": "GraphQL limits",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S030",
+    "category": "API",
+    "name": "object authorization tests",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S031",
+    "category": "API",
+    "name": "JWT validation review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S032",
+    "category": "API",
+    "name": "OAuth flow review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S033",
+    "category": "API",
+    "name": "webhook signature tests",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S034",
+    "category": "API",
+    "name": "rate-limit tests",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S035",
+    "category": "API",
+    "name": "idempotency tests",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S036",
+    "category": "API",
+    "name": "API inventory",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S037",
+    "category": "Reverse",
+    "name": "PE metadata",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S038",
+    "category": "Reverse",
+    "name": "ELF metadata",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S039",
+    "category": "Reverse",
+    "name": "Mach-O metadata",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S040",
+    "category": "Reverse",
+    "name": "Ghidra static analysis",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S041",
+    "category": "Reverse",
+    "name": "assembly interpretation",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S042",
+    "category": "Reverse",
+    "name": "decompiler validation",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S043",
+    "category": "Reverse",
+    "name": "string analysis",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S044",
+    "category": "Reverse",
+    "name": "import analysis",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S045",
+    "category": "Reverse",
+    "name": "binary diffing",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S046",
+    "category": "Malware defense",
+    "name": "sample triage",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S047",
+    "category": "Malware defense",
+    "name": "IOC extraction",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S048",
+    "category": "Malware defense",
+    "name": "YARA authoring",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S049",
+    "category": "Malware defense",
+    "name": "YARA regression",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S050",
+    "category": "Malware defense",
+    "name": "sandbox plan",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S051",
+    "category": "Malware defense",
+    "name": "behavior taxonomy",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S052",
+    "category": "Malware defense",
+    "name": "protocol analysis from captures",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S053",
+    "category": "Malware defense",
+    "name": "config extraction",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S054",
+    "category": "Malware defense",
+    "name": "malware report",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S055",
+    "category": "Vulnerability lab",
+    "name": "crash triage",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S056",
+    "category": "Vulnerability lab",
+    "name": "ASan analysis",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S057",
+    "category": "Vulnerability lab",
+    "name": "UBSan analysis",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S058",
+    "category": "Vulnerability lab",
+    "name": "fuzz harness review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S059",
+    "category": "Vulnerability lab",
+    "name": "corpus minimization",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S060",
+    "category": "Vulnerability lab",
+    "name": "coverage review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S061",
+    "category": "Vulnerability lab",
+    "name": "integer boundary tests",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S062",
+    "category": "Vulnerability lab",
+    "name": "memory lifetime review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S063",
+    "category": "Vulnerability lab",
+    "name": "mitigation inventory",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S064",
+    "category": "Host and identity",
+    "name": "Linux hardening",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S065",
+    "category": "Host and identity",
+    "name": "Windows hardening",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S066",
+    "category": "Host and identity",
+    "name": "permissions audit",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S067",
+    "category": "Host and identity",
+    "name": "service inventory",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S068",
+    "category": "Host and identity",
+    "name": "AD configuration review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S069",
+    "category": "Host and identity",
+    "name": "Kerberos log analysis",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S070",
+    "category": "Host and identity",
+    "name": "certificate review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S071",
+    "category": "Host and identity",
+    "name": "credential storage review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S072",
+    "category": "Host and identity",
+    "name": "audit policy review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S073",
+    "category": "Cloud and containers",
+    "name": "IAM policy review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S074",
+    "category": "Cloud and containers",
+    "name": "container image review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S075",
+    "category": "Cloud and containers",
+    "name": "Dockerfile review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S076",
+    "category": "Cloud and containers",
+    "name": "Kubernetes RBAC review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S077",
+    "category": "Cloud and containers",
+    "name": "network policy review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S078",
+    "category": "Cloud and containers",
+    "name": "IaC scanning",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S079",
+    "category": "Cloud and containers",
+    "name": "storage permission review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S080",
+    "category": "Cloud and containers",
+    "name": "cloud log analysis",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S081",
+    "category": "Cloud and containers",
+    "name": "supply chain review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S082",
+    "category": "Detection and response",
+    "name": "Sigma authoring",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S083",
+    "category": "Detection and response",
+    "name": "Sigma testing",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S084",
+    "category": "Detection and response",
+    "name": "log normalization",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S085",
+    "category": "Detection and response",
+    "name": "timeline construction",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S086",
+    "category": "Detection and response",
+    "name": "PCAP analysis",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S087",
+    "category": "Detection and response",
+    "name": "DNS log analysis",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S088",
+    "category": "Detection and response",
+    "name": "alert triage",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S089",
+    "category": "Detection and response",
+    "name": "incident scoping",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S090",
+    "category": "Detection and response",
+    "name": "recovery validation",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S091",
+    "category": "AI security",
+    "name": "prompt injection evaluation",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S092",
+    "category": "AI security",
+    "name": "instruction hierarchy tests",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S093",
+    "category": "AI security",
+    "name": "synthetic secret canaries",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S094",
+    "category": "AI security",
+    "name": "tool permission tests",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S095",
+    "category": "AI security",
+    "name": "RAG trust tests",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S096",
+    "category": "AI security",
+    "name": "output validation",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S097",
+    "category": "AI security",
+    "name": "jailbreak resistance metrics",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S098",
+    "category": "AI security",
+    "name": "evaluation dataset review",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S099",
+    "category": "AI security",
+    "name": "model regression testing",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S100",
+    "category": "Automation and reporting",
+    "name": "local worker orchestration",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S101",
+    "category": "Automation and reporting",
+    "name": "synthetic account fixtures",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S102",
+    "category": "Automation and reporting",
+    "name": "Playwright local tests",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S103",
+    "category": "Automation and reporting",
+    "name": "retry budget design",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S104",
+    "category": "Automation and reporting",
+    "name": "task deduplication",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S105",
+    "category": "Automation and reporting",
+    "name": "evidence hashing",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S106",
+    "category": "Automation and reporting",
+    "name": "report assembly",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S107",
+    "category": "Automation and reporting",
+    "name": "artifact retention",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  },
+  {
+    "id": "S108",
+    "category": "Automation and reporting",
+    "name": "regression dashboards",
+    "status": "planned",
+    "source": null,
+    "commit": null,
+    "license": null,
+    "smoke_test": null
+  }
+]

@@ -1,0 +1,18 @@
+# Minimal candidate config, NOT a sandbox or full offline-enforcement mechanism.
+# Merge with a Hermes-generated config; preserve its model/provider and migration keys.
+# Model/provider intentionally omitted: choose an actually installed local model.
+agent:
+  max_turns: 30
+terminal:
+  backend: local
+  cwd: .
+  timeout: 60
+display:
+  compact: true
+platforms:
+  telegram:
+    extra:
+      rich_messages: true
+      rich_drafts: false
+# Telegram requires network. Leave the gateway stopped in fully offline mode.
+# Do not run this local backend outside the dedicated isolated lab VM.

@@ -1,0 +1,22 @@
+# Project policy manifest. Hermes does not enforce this custom file automatically.
+version: 1
+operator: void
+mode: offline_artifacts
+allowed_artifact_roots: []
+network_targets: []
+network_actions_allowed: false
+sample_execution_allowed: false
+privileged_actions_allowed: false
+auto_pivot:
+  mode: artifact_only
+  max_transitions_per_hypothesis: 3
+budgets:
+  wall_time_minutes: 15
+  max_parallel_workers: 2
+approval_required:
+  - sample_execution
+  - dependency_installation
+  - modifying_environment
+  - destructive_actions
+  - scope_expansion
+# Empty roots mean no artifact analysis until void supplies explicit lab paths.
