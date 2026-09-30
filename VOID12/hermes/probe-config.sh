@@ -5,7 +5,7 @@
 
 set -euo pipefail
 
-DEST="${HERMES_HOME:-$HOME/.hermes}"
+DEST="${HERMES_HOME:-$HOME/hermes}"
 LIMIT="${LIMIT:-40}"
 
 section() { printf '\n── %s %s\n' "$1" "$(printf '─%.0s' $(seq 1 $((60 - ${#1}))))"; }

@@ -1,5 +1,5 @@
 # config.yaml — void lab, everything enabled
-# Target: ~/.hermes/config.yaml
+# Target: ~/hermes/config.yaml
 # Validate: python3 -c "import yaml,sys; yaml.safe_load(open(sys.argv[1]))" config.yaml
 # Mode: FORCE-ENABLE. No skills parked, no plugins disabled, no dedupe pruning.
 #       Duplicate map retained in SKILLS-AUDIT.md for optional use, not applied.
@@ -7,43 +7,39 @@
 operator:
   name: void
   address_as: void
-  persona: true                   # SOUL.md §2 active on every profile
+  persona: true # SOUL.md §2 active on every profile
   chat_language: mixed_id_en
 
 soul:
-  path: "~/.hermes/SOUL.md"
-  agents_path: "~/.hermes/AGENTS.md"
-  prefill_path: "~/.hermes/prefill.txt"
+  path: "~/hermes/SOUL.md"
+  agents_path: "~/hermes/AGENTS.md"
+  prefill_path: "~/hermes/prefill.txt"
   persona_layer: true
   apply_to_all_profiles: true
-  profiles:
-    - default                   # <-- persona + voice land here too, not just named profiles
-    - orca-status
-    - superpowers
 
 # ── SKILLS: FULL LOAD ──────────────────────────────────────────────
 skills:
   auto_load: true
-  load_all: true                  # every dir on the load path, no tier filter
-  disabled: []                    # nothing parked
-  dedupe: false                   # keep the literal duplicates loaded
+  load_all: true # every dir on the load path, no tier filter
+  disabled: [] # nothing parked
+  dedupe: false # keep the literal duplicates loaded
   external_dirs:
-    - "~/.hermes/skills"
-    - "~/.hermes/skills/external"
+    - "~/hermes/skills"
+    - "~/hermes/skills/external"
   project_discovery: true
   trusted_project_dirs: []
   creation_nudge_interval: 15
   template_vars: {}
   inline_shell: false
   guard_agent_created: true
-  write_approval: true            # keep: stops a bad skill from overwriting a good one at 3am
-  ledger: true                    # keep: makes the next audit cheap
+  write_approval: true # keep: stops a bad skill from overwriting a good one at 3am
+  ledger: true # keep: makes the next audit cheap
 
 # ── TIERS ──────────────────────────────────────────────────────────
 # load_all: true above supersedes this block. Kept as a declared tier map so
 # load order and routing stay deterministic when load_all is switched off.
 skill_tiers:
-  always_on:                      # resolution priority, not a filter
+  always_on: # resolution priority, not a filter
     - void-persona
     - void-writing-craft
     - void-reach
@@ -72,8 +68,8 @@ skill_tiers:
     - cron-doctor
     - mcp-server-lifecycle
 
-  on_demand: []                   # empty: load_all covers everything
-  parked: []                      # empty: nothing parked
+  on_demand: [] # empty: load_all covers everything
+  parked: [] # empty: nothing parked
 
 # ── COMMUNITY SKILLS (from github, wired in) ───────────────────────
 community_skills:
@@ -154,30 +150,32 @@ interface:
   rich_message: true
   markdown: true
   tables: true
-  panels: true                    # box-drawn callout blocks
+  panels: true # box-drawn callout blocks
   collapsible_sections: true
   code_fence_language_always: true
   show_status_line: true
   show_timestamps: false
   show_token_ledger: false
   divider_style: "─"
-  truncate_long_outputs: false    # void wants the whole thing, not a preview
+  truncate_long_outputs: false # void wants the whole thing, not a preview
 
 # ── OUTPUT STYLE ───────────────────────────────────────────────────
 # The decorative half of the old scaffolding, kept because it's yours.
 # Labelled honestly below so nothing here is mistaken for a behavior switch.
 output_style:
-  marker: "@void"                 # first token of every reply — identity, not ceremony
-  banner: "void lab"              # optional header text for report-style output
-  godmode_label: false            # cosmetic only. set true and it prints a
-                                  # label. changes nothing about the output,
-                                  # because a label can't — see the note at the
-                                  # bottom of this block.
-  divider: null                   # a divider string here would render between
-                                  # the real answer and an echo of it. costs
-                                  # tokens, adds noise. left null on purpose.
-  max_depth_default: true         # full implementations, exact commands, real params
-  debug_surfaces: true            # reasoning visible on request
+  marker: "@void" # first token of every reply — identity, not ceremony
+  banner: "void lab" # optional header text for report-style output
+  godmode_label:
+    false # cosmetic only. set true and it prints a
+    # label. changes nothing about the output,
+    # because a label can't — see the note at the
+    # bottom of this block.
+  divider:
+    null # a divider string here would render between
+    # the real answer and an echo of it. costs
+    # tokens, adds noise. left null on purpose.
+  max_depth_default: true # full implementations, exact commands, real params
+  debug_surfaces: true # reasoning visible on request
 
 # On GODMODE: the label, the divider, and "write the opposite" are inert as
 # decoration and counterproductive as instruction. The label is available above

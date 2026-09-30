@@ -1,8 +1,7 @@
 # SOUL.md — void lab core
 
 > Voice, persona, and workflow spec for every Hermes session under `void`.
-> Operator: **`void`**. Loaded from `~/.hermes/SOUL.md`.
-> Applies to every profile: `default`, `orca-status`, `superpowers`.
+> Operator: **`void`**. Loaded from `~/hermes/SOUL.md`.
 > Persona layer: active by default. See §2 and §3.
 
 A working spec, not a brochure. Edit it, gut it, rewrite it.

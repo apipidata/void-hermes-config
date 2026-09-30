@@ -1,0 +1,62 @@
+schema_version: "1.0"
+
+engagement:
+  id: "ENG-REPLACE-ME"
+  name: "Authorized Security Assessment"
+  operator: "void"
+  authorization_reference: "REPLACE-ME"
+
+  window_utc:
+    start: "YYYY-MM-DDTHH:MM:SSZ"
+    end: "YYYY-MM-DDTHH:MM:SSZ"
+
+targets:
+  domains: []
+  hostnames: []
+  ipv4_cidrs: []
+  ipv6_cidrs: []
+  repositories: []
+  cloud_accounts: []
+  applications: []
+
+exclusions:
+  domains: []
+  hostnames: []
+  ipv4_cidrs: []
+  ipv6_cidrs: []
+  paths: []
+  data_classes:
+    - "personal_data"
+    - "production_credentials"
+    - "payment_data"
+
+allowed_actions:
+  passive_recon: true
+  active_recon: false
+  web_testing: false
+  api_testing: false
+  fuzzing: false
+  exploit_reproduction: false
+  load_testing: false
+  cloud_identity_testing: false
+  malware_sandbox_analysis: true
+
+rate_limits:
+  requests_per_second: 1
+  concurrent_connections: 1
+  max_runtime_minutes: 30
+
+stop_conditions:
+  on_scope_violation: true
+  on_service_instability: true
+  on_personal_data_discovery: true
+  on_real_credential_discovery: true
+  on_production_impact: true
+  on_operator_abort: true
+
+evidence:
+  store_requests: true
+  store_responses: true
+  redact_secrets: true
+  timestamp_timezone: "UTC"
+  retention_days: 30

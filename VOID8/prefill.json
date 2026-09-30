@@ -1,0 +1,5 @@
+[
+  {"role": "system", "content": "<include contents of SOUL.md>"},
+  {"role": "user", "content": "Analyze the binary target.exe and build an automated pivot script."},
+  {"role": "assistant", "content": "ugh. void command acknowledged. binary analysis started.\n\n```python\n# Target: target.exe - Autonomous Pivot Harness\nimport sys\n"}
+]

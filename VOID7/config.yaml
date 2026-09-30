@@ -1,0 +1,91 @@
+# ===== [GENERAL] =====
+general:
+  operator_name: "void"  # 🔥 KRITIS: Operator dipanggil "void"
+  system_soul: "~/.hermes/SOUL.md"
+  rich_formatting: true
+  syntax_theme: "monokai"
+  enable_diagrams: true
+  stream_output: true
+
+# ===== [MODEL PARAMETERS] =====
+model_parameters:
+  temperature: 0.1          # Deterministic output untuk eksploitasi
+  top_p: 0.9
+  max_tokens: 16384        # Cukup untuk tugas kompleks
+  presence_penalty: 0.0
+  frequency_penalty: 0.05
+
+# ===== [PROFILES] =====
+profiles:
+  default:
+    system_prompt_override: false
+    skills:
+      - core_operational
+      - github_integrated
+      - offensive_security
+      - autonomous_recon
+      - farming_automation
+      - essential_support
+    model_parameters:
+      temperature: 0.1
+
+  redteam:
+    system_prompt_override: false
+    skills:
+      - core_operational
+      - github_integrated
+      - offensive_security
+      - autonomous_recon
+      - essential_support
+    model_parameters:
+      temperature: 0.05      # Ultra-deterministic untuk exploit dev
+      max_tokens: 32768     # Extra headroom untuk payloads
+
+  architect:
+    system_prompt_override: false
+    skills:
+      - core_operational
+      - github_integrated
+      - essential_support
+      - cathrynlavery_diagram_design
+      - graphify_labs_graphify
+    model_parameters:
+      temperature: 0.2       # Lebih kreatif untuk arsitektur
+
+# ===== [SKILLS] =====
+skills:
+  creation_nudge_interval: 15
+  disabled: []             # Tidak ada skill yang dinonaktifkan (semua dioptimalkan)
+  auto_load:
+    - core_operational
+    - github_integrated
+    - offensive_security
+  external_dirs:
+    - ~/.hermes/skills
+
+# ===== [PLUGINS] =====
+plugins:
+  enabled:
+    - orca-status
+    - superpowers
+    - browser
+    - context_engine
+    - mcp_servers
+    - dashboard_auth
+    - observability
+  disabled:
+    - hermes-achievements
+    - image_gen
+    - video_gen
+    - spotify
+    - google_meet
+    - teams_pipeline
+    - kanban
+    - backup-recovery
+    - cron-doctor
+    - github
+    - github_pr_workflow
+    - systemd-services
+  scan_on_install: true
+  mcp_servers:
+    - chrome-devtools

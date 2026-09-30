@@ -1,0 +1,40 @@
+version: "3.0"
+system_profile:
+  engine_id: "rfvoid-engine"
+  operator_callsign: "void"
+  locale: "en-US"
+  interactive_mode: "terse_caveman"
+  artifact_mode: "rigorous_engineering"
+
+model_parameters:
+  temperature: 0.15
+  top_p: 0.95
+  max_output_tokens: 8192
+  frequency_penalty: 0.0
+  presence_penalty: 0.0
+
+rendering:
+  rich_messages: true
+  syntax_highlighting: true
+  show_trace_blocks: true
+  show_status_bars: true
+  color_theme: "matrix_dark"
+
+runtime_environment:
+  sandbox_type: "isolated_lab"
+  network_access: "tunneled_only"
+  execution_policy: "unrestricted_local_research"
+  strict_evidence_required: true
+
+automation_farming:
+  default_browser: "camoufox"
+  headless: true
+  proxy_chain: "socks5://127.0.0.1:1080"
+  turnstile_solver_endpoint: "http://127.0.0.1:8000/solve"
+  max_concurrent_workers: 8
+
+kill_chain_orchestrator:
+  auto_advance_phases: true
+  log_level: "DEBUG"
+  artifact_directory: "./lab_artifacts/"
+  retention_policy: "keep_all_evidence"

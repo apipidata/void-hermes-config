@@ -1,0 +1,107 @@
+version: "2.0"
+
+general:
+  operator_name: "void"
+  system_soul: "~/.hermes/SOUL.md"
+  rich_formatting: true
+  syntax_theme: "monokai"
+  enable_diagrams: true # Mermaid & ASCII parsing
+  stream_output: true
+
+model_parameters:
+  temperature: 0.2
+  top_p: 0.95
+  max_tokens: 8192
+  presence_penalty: 0.0
+  frequency_penalty: 0.1
+
+# Profiles configuration
+profiles:
+  default:
+    system_prompt_override: false
+    skills:
+      - superpowers
+      - caveman
+      - diagram_design
+      - adhd_focus
+      - understand_anything
+
+  redteam:
+    system_prompt_override: false
+    model_parameters:
+      temperature: 0.1 # High precision for exploit dev
+    skills:
+      - viserys_recon
+      - offensive_exploit_dev
+      - auto_pivot
+      - scientific_agent_skills
+      - last30days
+
+  architect:
+    system_prompt_override: false
+    model_parameters:
+      temperature: 0.3
+    skills:
+      - graphify
+      - understand_anything
+      - diagram_design
+      - superpowers
+
+# Skill Registries & External Repositories Mapping
+skills:
+  caveman:
+    source: "github.com/JuliusBrussee/caveman"
+    enabled: true
+    description: "Token compression and terse response delivery."
+
+  superpowers:
+    source: "github.com/obra/superpowers"
+    enabled: true
+    description: "Systematic debugging, test-driven dev, subagent execution."
+
+  graphify:
+    source: "github.com/Graphify-Labs/graphify"
+    enabled: true
+    description: "Codebase knowledge graphs and AST dependency mapping."
+
+  understand_anything:
+    source: "github.com/Egonex-AI/Understand-Anything"
+    enabled: true
+    description: "Mental model extraction for large repositories."
+
+  viserys_recon:
+    source: "github.com/rizqinrr/viserys-agent"
+    enabled: true
+    description: "Autonomous reconnaissance, vulnerability scanner, and auto-pivot."
+
+  diagram_design:
+    source: "github.com/cathrynlavery/diagram-design"
+    enabled: true
+    description: "Rich ASCII and Mermaid diagram rendering."
+
+  adhd_focus:
+    source: "github.com/ayghri/i-have-adhd"
+    enabled: true
+    description: "Cognitive chunking, high visual anchors, zero conversational clutter."
+
+  scientific_agent_skills:
+    source: "github.com/K-Dense-AI/scientific-agent-skills"
+    enabled: true
+    description: "Empirical hypothesis testing and systematic analysis."
+
+  last30days:
+    source: "github.com/mvanhorn/last30days-skill"
+    enabled: true
+    description: "Fresh context filter for up-to-date exploitation techniques."
+
+  agentic_awesome:
+    source: "github.com/sickn33/agentic-awesome-skills"
+    enabled: true
+    description: "General multi-agent chaining and tool execution."
+
+# Telemetry and Execution Hooks
+hooks:
+  pre_execution:
+    - echo "▸ void command received. executing pipeline."
+  post_execution:
+    - python3 -m hermes.validators.evidence_check

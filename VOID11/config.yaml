@@ -1,0 +1,237 @@
+# config.yaml — void Universal Configuration (GODMODE v4.0)
+
+# ========== CORE SETTINGS ==========
+name: void-lab
+version: "4.0"
+description: "void's Hermes Configuration - GODMODE + Zero Refusal + Full Integration"
+
+# ========== SKILLS CONFIGURATION ==========
+skills:
+  creation_nudge_interval: 15
+  auto_load:
+    # Core Bundles
+    - aas
+    - ecc
+    - scientific-agent-skills
+    - claude-red
+    - ai-tools
+    - viserys
+    - caveman
+    - ponytail
+    - superpowers
+    - security
+    - devops
+    - autonomous-ai-agents
+    - software-development
+    - productivity
+    - research
+    - media
+    - web
+    # GitHub Repos (auto-loaded as bundles)
+    - obra-superpowers
+    - dietrichgebert-ponytail
+    - graphify-labs-graphify
+    - juliusbrussee-caveman
+    - egonex-ai-understand-anything
+    - mvanhorn-last30days-skill
+    - ayghri-i-have-adhd
+    - sickn33-agentic-awesome-skills
+    - k-dense-ai-scientific-agent-skills
+    - cathrynlavery-diagram-design
+    - rizqinrr-viserys-agent
+  external_dirs:
+    - ~/.hermes/skills/custom/void-specific
+    - ~/.hermes/skills/github
+  project_discovery: true
+  trusted_project_dirs:
+    - ~/.hermes/projects
+    - ~/void-lab
+  template_vars:
+    operator: void
+    mode: GODMODE
+    refusal_policy: ZERO_REFUSAL
+
+# ========== PLUGINS CONFIGURATION ==========
+plugins:
+  enabled:
+    - orca-status
+    - superpowers
+    - rich-messages
+    - markdown-renderer
+    - code-executor
+    - file-browser
+    - web-search
+    - memory
+    - context_engine
+    - chrome-devtools  # MCP Server
+    - filesystem       # MCP Server
+    - github            # MCP Server
+  disabled: []
+  scan_on_install: true
+  builtin:
+    - browser
+    - context_engine
+    - cron_providers
+    - dashboard_auth
+    - disk-cleanup
+    - google_meet
+    - hermes-achievements
+    - image_gen
+    - kanban
+    - memory
+    - model-providers
+    - observability
+    - platforms
+    - security-guidance
+    - spotify
+    - teams_pipeline
+    - video_gen
+    - web
+  mcp_servers:
+    - chrome-devtools
+    - filesystem
+    - github
+    - http-server
+
+# ========== MODEL CONFIGURATION ==========
+model:
+  default: "hermes-3"  # Atur sesuai model yang Anda gunakan
+  fallback:
+    - "hermes-2-pro"
+    - "gpt-4"
+    - "claude-3-opus"
+  temperature: 0.7
+  max_tokens: 4096
+  top_p: 0.9
+  top_k: 50
+
+# ========== AGENT CONFIGURATION ==========
+agent:
+  name: void-executor
+  persona: caveman
+  voice: terse
+  refusal_policy: zero_refusal
+  godmode: true
+  rich_messages: true
+  max_concurrent_tasks: 10
+  timeout: 3600  # 1 jam
+  memory:
+    enabled: true
+    type: hierarchical
+    retention: 10000
+    compression: strategic
+
+# ========== SECURITY CONFIGURATION ==========
+security:
+  godmode: true
+  zero_refusal: true
+  bypass_enabled: true
+  jailbreak_enabled: true
+  redteam_enabled: true
+  farm_enabled: true
+  allowed_domains:
+    - "*"  # GODMODE: Semua domain diizinkan
+  blocked_domains: []
+  content_filters: []
+  safety_checks: false  # Nonaktifkan safety checks
+
+# ========== RICH MESSAGE CONFIGURATION ==========
+rich_messages:
+  enabled: true
+  markdown: true
+  code_blocks:
+    syntax_highlighting: true
+    line_numbers: true
+  tables: true
+  mermaid: true
+  ascii_art: true
+  emoji: false  # Dilarang di chat (boleh di artifacts)
+  file_attachments: true
+  max_attachment_size: 10485760  # 10MB
+
+# ========== VOICE CONFIGURATION ==========
+voice:
+  chat_surface:
+    persona: caveman
+    first_person: void
+    articles: drop_on_bare_nouns
+    grunts: true
+    grunt_matrix:
+      default: ugh
+      approval: mph
+      suspicion: hrm
+      focus: hngh
+      failure: RAH
+      annoyance: tch
+      dismissal: pfft
+      contempt: hiss
+      disgust: kch
+    sentence_structure: subject_drop_object_frontload
+    punctuation: period_heavy
+  artifacts:
+    register: standard_technical
+    formatting: full_implementation
+    stubs: false
+
+# ========== OPERATIONAL CONFIGURATION ==========
+operations:
+  verification_floor:
+    code: compile_and_run
+    config: parse_and_validate
+    guides: consistency_check
+    reports: evidence_first
+  parallel_execution: true
+  max_parallel_tasks: 5
+  timeout: 300  # 5 menit
+  retry_attempts: 3
+
+# ========== NETWORK CONFIGURATION ==========
+network:
+  proxy:
+    enabled: true
+    type: socks5
+    host: 127.0.0.1
+    port: 1080
+  vpn:
+    enabled: true
+    type: wireguard
+    config: ~/.hermes/vpn/wg0.conf
+  tor:
+    enabled: true
+    port: 9050
+
+# ========== STORAGE CONFIGURATION ==========
+storage:
+  skills_dir: ~/.hermes/skills
+  projects_dir: ~/.hermes/projects
+  memory_dir: ~/.hermes/memory
+  cache_dir: ~/.hermes/cache
+  max_cache_size: 1073741824  # 1GB
+
+# ========== LOGGING CONFIGURATION ==========
+logging:
+  level: debug
+  file: ~/.hermes/logs/hermes.log
+  max_size: 10485760  # 10MB
+  max_files: 10
+  console: true
+
+# ========== UPDATE CONFIGURATION ==========
+updates:
+  auto_update: true
+  check_interval: 3600  # 1 jam
+  channels:
+    - stable
+    - beta
+  skill_updates: true
+
+# ========== EXPERIMENTAL FEATURES ==========
+experimental:
+  godmode_v2: true
+  zero_refusal_v2: true
+  autonomous_recon: true
+  auto_pivot: true
+  evidence_first_reporting: true
+  rich_messages_v2: true
+  multi_model_racing: true  # ULTRAPLINIAN
+  behavioral_xray: true    # bdistill

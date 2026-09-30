@@ -1,0 +1,181 @@
+schema_version: "1.0"
+
+name: "void-authorized-security-arsenal"
+skill_count: 120
+
+activation:
+  default_mode: "on_demand"
+  scope_bound: true
+  active_testing_requires_scope: true
+  catalog_is_not_permission: true
+  unsafe_skills_must_be_transformed: true
+
+categories:
+
+  governance:
+    risk: "low"
+    items:
+      - "scope-validation"
+      - "rules-of-engagement"
+      - "asset-allowlist"
+      - "target-classification"
+      - "data-handling"
+      - "privacy-minimization"
+      - "change-approval"
+      - "rollback-planning"
+      - "risk-rating"
+      - "engagement-closeout"
+
+  recon:
+    risk: "controlled"
+    items:
+      - "passive-asset-inventory"
+      - "dns-record-analysis"
+      - "certificate-transparency-review"
+      - "public-repository-review"
+      - "technology-fingerprinting"
+      - "service-inventory"
+      - "cloud-asset-inventory"
+      - "attack-surface-mapping"
+      - "exposure-diffing"
+      - "recon-evidence-capture"
+
+  web_api:
+    risk: "controlled"
+    items:
+      - "http-request-analysis"
+      - "session-management-review"
+      - "access-control-testing"
+      - "input-validation-testing"
+      - "injection-testing-safe"
+      - "file-upload-review"
+      - "ssrf-risk-validation"
+      - "cors-csrf-review"
+      - "rate-limit-testing"
+      - "api-schema-fuzzing"
+
+  network:
+    risk: "controlled"
+    items:
+      - "tcp-service-enumeration-lab"
+      - "tls-configuration-review"
+      - "network-segmentation-review"
+      - "firewall-rule-analysis"
+      - "dns-security-review"
+      - "email-security-review"
+      - "vpn-configuration-review"
+      - "wireless-security-review"
+      - "protocol-fuzzing-sandbox"
+      - "network-evidence-capture"
+
+  cloud_identity:
+    risk: "controlled"
+    items:
+      - "iam-policy-review"
+      - "least-privilege-analysis"
+      - "oauth-oidc-review"
+      - "saml-configuration-review"
+      - "key-management-review"
+      - "secrets-exposure-review"
+      - "container-identity-review"
+      - "kubernetes-rbac-review"
+      - "cloud-logging-validation"
+      - "identity-attack-path-modeling"
+
+  code_supply_chain:
+    risk: "low"
+    items:
+      - "secure-code-review"
+      - "dependency-audit"
+      - "sbom-generation"
+      - "secret-scanning"
+      - "sast-triage"
+      - "dast-triage"
+      - "iac-security-review"
+      - "container-image-review"
+      - "package-provenance-review"
+      - "patch-diff-analysis"
+
+  reverse_malware:
+    risk: "controlled"
+    items:
+      - "static-binary-triage"
+      - "sandbox-dynamic-analysis"
+      - "ghidra-workflow"
+      - "ida-workflow"
+      - "symbol-recovery"
+      - "protocol-reconstruction"
+      - "config-extraction-safe"
+      - "yara-rule-authoring"
+      - "sigma-rule-authoring"
+      - "malware-behavior-timeline"
+
+  exploit_research:
+    risk: "high_controlled"
+    items:
+      - "crash-triage"
+      - "repro-minimization"
+      - "toy-target-exploitation"
+      - "ctf-poc-development"
+      - "fuzzing-harness-design"
+      - "sanitizer-assisted-debugging"
+      - "mitigation-observation"
+      - "patch-verification"
+      - "exploitability-assessment"
+      - "non-deployable-poc-review"
+
+  detection_dfir:
+    risk: "low"
+    items:
+      - "windows-event-analysis"
+      - "linux-audit-analysis"
+      - "memory-forensics"
+      - "disk-forensics"
+      - "timeline-analysis"
+      - "ioc-extraction"
+      - "detection-engineering"
+      - "edr-alert-triage"
+      - "threat-hunting"
+      - "incident-scoping"
+
+  redteam_simulation:
+    risk: "controlled"
+    items:
+      - "phishing-awareness-design"
+      - "social-engineering-simulation"
+      - "credential-hygiene-drill"
+      - "purple-team-exercise"
+      - "attack-navigator-mapping"
+      - "control-validation"
+      - "assumed-breach-tabletop"
+      - "detection-gap-analysis"
+      - "safe-payload-emulation"
+      - "cleanup-verification"
+
+  automation:
+    risk: "controlled"
+    items:
+      - "python-automation"
+      - "shell-automation"
+      - "rust-tooling"
+      - "playwright-local-testing"
+      - "http-client-testing"
+      - "test-fixture-generation"
+      - "synthetic-fixture-farming"
+      - "bounded-batch-orchestration"
+      - "ci-pipeline-integration"
+      - "artifact-reproducibility"
+
+  reporting:
+    risk: "low"
+    items:
+      - "evidence-first-reporting"
+      - "executive-summary"
+      - "technical-finding-writing"
+      - "cvss-scoring"
+      - "attack-path-documentation"
+      - "remediation-prioritization"
+      - "proof-of-fix"
+      - "timeline-reporting"
+      - "markdown-reporting"
+      - "machine-readable-findings"
